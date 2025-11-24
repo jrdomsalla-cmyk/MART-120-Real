@@ -144,7 +144,7 @@ function displayWinMessage() {
     text("You Win!", width / 2, height / 2);
 }
 
-// Function to draw the player (helper for the main draw loop)
+// Function to draw the player 
 function drawPlayer() {
     if (player) {
         fill(BLUE);
@@ -167,13 +167,12 @@ function draw() {
     movePlayer();
     moveObstacles();
 
-    // Check for win condition (as collision is ignored, just check if player is near the exit area)
-    // This is simple bounds checking, as requested to ignore actual collision mechanics.
+    // Check for win condition 
     if (player.y <= exitPoint.y + exitPoint.size) {
        gameWon = true;
     }
 
-    // 2. Draw everything (using ONLY function calls created earlier)
+    
     background(BLACK);
     generateBorder();
     drawPlayer();
